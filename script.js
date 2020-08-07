@@ -51,16 +51,12 @@ const getQuote = async () => {
     // Stop loader & show quote
     quoteLoadedNowhideLoader();
     // Lets throw fake error to build a check to see if it gets an error it will try 5 times and exit
-    throw new Error('oops');
+    // throw new Error('oops');
     } catch(error) {
-      for ( var i = 0; i < 10; i++ ) {
-        // This will loop 10 times
       console.log('whoops, no quote', error);
-      if (i === 10) { break; }
       getQuote();
       }
     }
-  }
 
 function tweetQuote(){
   const quote = quoteText.innerText;
