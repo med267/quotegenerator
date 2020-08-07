@@ -28,7 +28,7 @@ body{
   max-width: 900px;
   padding: 20px 30px;
   border-radius: 10px;
-  background-color: rgba(256, 256, 256, 0.4);
+  background-color: rgba(233, 21, 109, 0.4);
   box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -99,12 +99,21 @@ button:active{
 
 /* CSS Loader */
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #333; /* Dark Gray */
+  border: 16px solid #f3f3f3;
   border-radius: 50%;
+  border-top: 16px solid red;
+  border-right: 16px solid pink;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
   width: 120px;
   height: 120px;
+  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
 }
 
 @keyframes spin {
